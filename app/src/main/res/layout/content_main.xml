@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    tools:ignore="HardcodedText">
+
+    <Spinner
+        android:id="@+id/spinnerWithWho"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFrom" />
+
+    <Spinner
+        android:id="@+id/spinnerMonth"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerWithWho"
+        app:layout_constraintTop_toTopOf="@+id/spinnerWithWho"></Spinner>
+
+    <ImageView
+        android:id="@+id/imageA8Active"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:onClick="changeBGColorA8"
+        app:layout_constraintEnd_toEndOf="@+id/imageA4Party"
+        app:layout_constraintStart_toStartOf="@+id/imageA4Party"
+        app:layout_constraintTop_toTopOf="@+id/imageA5History"
+        app:srcCompat="@drawable/activ" />
+
+    <ImageView
+        android:id="@+id/imageA7Nature"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:onClick="changeBGColorA7"
+        app:layout_constraintEnd_toEndOf="@+id/imageA3Art"
+        app:layout_constraintStart_toStartOf="@+id/imageA3Art"
+        app:layout_constraintTop_toTopOf="@+id/imageA5History"
+        app:srcCompat="@drawable/nature" />
+
+    <ImageView
+        android:id="@+id/imageA6Beach"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:onClick="changeBGColorA6"
+        app:layout_constraintEnd_toEndOf="@+id/imageA2Gastro"
+        app:layout_constraintStart_toStartOf="@+id/imageA2Gastro"
+        app:layout_constraintTop_toTopOf="@+id/imageA5History"
+        app:srcCompat="@drawable/beach" />
+
+    <ImageView
+        android:id="@+id/imageA5History"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
+        android:onClick="changeBGColorA5"
+        app:layout_constraintEnd_toEndOf="@+id/imageA1City"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="@+id/imageA1City"
+        app:layout_constraintTop_toBottomOf="@+id/textA1City"
+        app:srcCompat="@drawable/history" />
+
+    <TextView
+        android:id="@+id/textA4Party"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Party"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA4Party"
+        app:layout_constraintStart_toStartOf="@+id/imageA4Party"
+        app:layout_constraintTop_toBottomOf="@+id/imageA4Party" />
+
+    <ImageView
+        android:id="@+id/imageA4Party"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:onClick="changeBGColorA4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/imageA3Art"
+        app:layout_constraintTop_toTopOf="@+id/imageA1City"
+        app:srcCompat="@drawable/party2" />
+
+    <ImageView
+        android:id="@+id/imageA3Art"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:onClick="changeBGColorA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageA2Gastro"
+        app:layout_constraintTop_toTopOf="@+id/imageA1City"
+        app:srcCompat="@drawable/art" />
+
+    <TextView
+        android:id="@+id/textA3Art"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Art"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA3Art"
+        app:layout_constraintStart_toStartOf="@+id/imageA3Art"
+        app:layout_constraintTop_toBottomOf="@+id/imageA3Art" />
+
+    <ImageView
+        android:id="@+id/imageA2Gastro"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="changeBGColorA2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageA1City"
+        app:layout_constraintTop_toTopOf="@+id/imageA1City"
+        app:srcCompat="@drawable/gastro2" />
+
+    <TextView
+        android:id="@+id/textA2Gastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gastro"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA2Gastro"
+        app:layout_constraintStart_toStartOf="@+id/imageA2Gastro"
+        app:layout_constraintTop_toBottomOf="@+id/imageA2Gastro" />
+
+    <TextView
+        android:id="@+id/textA5History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA5History"
+        app:layout_constraintStart_toStartOf="@+id/imageA5History"
+        app:layout_constraintTop_toBottomOf="@+id/imageA5History" />
+
+    <TextView
+        android:id="@+id/textA6Beach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beach"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA6Beach"
+        app:layout_constraintStart_toStartOf="@+id/imageA6Beach"
+        app:layout_constraintTop_toBottomOf="@+id/imageA5History" />
+
+    <TextView
+        android:id="@+id/textA7Nature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nature"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA7Nature"
+        app:layout_constraintStart_toStartOf="@+id/imageA7Nature"
+        app:layout_constraintTop_toBottomOf="@+id/imageA5History" />
+
+    <TextView
+        android:id="@+id/textA8Active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA8Active"
+        app:layout_constraintStart_toStartOf="@+id/imageA8Active"
+        app:layout_constraintTop_toBottomOf="@+id/imageA5History" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="280dp"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vonat1" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:breakStrategy="high_quality"
+        android:text="GreenPacker"
+        android:textColor="@color/colorMidnightBlue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:breakStrategy="high_quality"
+        android:text="Where can I travel the green way?"
+        android:textColor="@color/colorMidnightBlue"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <ImageView
+        android:id="@+id/imageA1City"
+        android:layout_width="80dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="changeBGColorA1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWithWho"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/city" />
+
+    <TextView
+        android:id="@+id/textA1City"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="@+id/imageA1City"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/imageA1City"
+        app:layout_constraintTop_toBottomOf="@+id/imageA1City" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Where?"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/imageA1City"
+        app:layout_constraintTop_toBottomOf="@+id/textA5History"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/buttonKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I know where"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSearch"
+        app:layout_constraintEnd_toEndOf="@+id/imageA8Active"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonSearch"
+        app:layout_constraintTop_toTopOf="@+id/buttonSearch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Budapest"
+        android:textColor="@color/colorMidnightBlue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="from"
+        android:textColor="@color/colorMidnightBlue"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextFrom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
